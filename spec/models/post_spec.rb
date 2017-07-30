@@ -24,4 +24,7 @@ RSpec.describe Post, type: :model do
   it { should validate_presence_of :status }
   it { should belong_to :author}
   it { should have_many :comments}
+  it { should have_and_belong_to_many :tags}
+  it { should have_many :likes}
+  it { should have_many :liked_users}
 end
