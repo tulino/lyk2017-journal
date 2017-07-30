@@ -20,4 +20,5 @@ class User < ApplicationRecord
   validates :role, presence: true
   validates :email, presence: true, format: { with: /([\.\w\-]+@\w+\.\w{2,3}(?:\.?\.?\w{2,3})?)/ }
   validates :password, presence: true, length: { minimum: 8, maximum: 30 }
+  enum role: [:regular, :editor, :admin]
 end
